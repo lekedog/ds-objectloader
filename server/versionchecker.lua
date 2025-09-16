@@ -1,11 +1,7 @@
------------------------------------------------------------------------
--- version checker
------------------------------------------------------------------------
 local function versionCheckPrint(_type, log)
     local color = _type == 'success' and '^2' or '^1'
     print(('^5[ds-objectloader]%s %s^7'):format(color, log))
 end
-
 local function CheckVersion()
     PerformHttpRequest('https://raw.githubusercontent.com/lekedog/ds-versioncheckers/main/ds-objectloader/version.txt', function(err, text, headers)
         local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
@@ -24,8 +20,4 @@ local function CheckVersion()
         end
     end)
 end
-
---------------------------------------------------------------------------------------------------
--- start version check
---------------------------------------------------------------------------------------------------
 CheckVersion()
