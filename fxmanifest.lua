@@ -10,9 +10,10 @@ shared_scripts {
 }
 
 client_scripts {
-   'client/cl_main.lua',
+   'client/client.lua',
    'client/versionchecker.lua'
 }
+
 
 
 lua54 'yes'
